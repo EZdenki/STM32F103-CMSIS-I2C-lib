@@ -5,6 +5,8 @@ Requires the following files in the working directory:
 + stm32f103x8.h
 + STM32F103-pause-lib.c
 
+Another header file may be used instead of stm32f103x8.h if it offers similar functionality. In such cases, the name of the header file should be updated in STM32F103-I2C-lib.c<br>
+<br>
 Note that the desired target I2C interface, I2C1 or I2C2, will be passed to *thisI2C. The interface name is passed as-is, like<br> `I2C_init( I2C1 );`<br>
 ## The following routines are implemented:<br>
 
