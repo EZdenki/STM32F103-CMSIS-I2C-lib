@@ -1,10 +1,10 @@
 // STM32F103-CMSIS-I2C-lib.c
+//   Version 1.0	7/16/2023	Updated Comments
 //
 // Target Microcontroller: STM32F103 (Blue Pill)
 // Mike Shegedin, 05/2023   Started
-//                6/22/2023 Updated Comments
 //
-// Requires the STM32F103-pause-lib.c library.
+// Requires the STM32F103-Pause-lib.c library.
 //
 // Code to implement the following routines.
 // Note that the desired target I2C interface, I2C1 or I2C2, will be passed to *thisI2C.
@@ -46,8 +46,8 @@
 #define __STM32F103_CMSIS_I2C_LIB_C
 
 
-#include "stm32f103x8.h"  // Primary CMSIS header file
-#include "STM32F103-pause-lib.c"
+#include "stm32f103xb.h"  // Primary CMSIS header file
+#include "STM32F103-Pause-lib.c"
 
 
 // I2C_init
@@ -226,8 +226,8 @@ I2C_readByte( I2C_TypeDef *thisI2C, uint8_t address )
   
   thisI2C->CR1 &= ~(I2C_CR1_ACK);           // Clear ACK bit
   
-  // Read these regs to clear ADDR bit [EV6]. "__attribute__((unused))" is to avoid compiler warning
-  // about unused variables.
+  // Read these regs to clear ADDR bit [EV6]. "__attribute__((unused))" is to avoid compiler
+  // warning about unused variables.
   uint8_t temp __attribute__((unused)) = thisI2C->SR1 | thisI2C->SR2;
   thisI2C->CR1 |= I2C_CR1_STOP;             // Stop I2C
 

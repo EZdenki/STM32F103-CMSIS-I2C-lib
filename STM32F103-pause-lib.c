@@ -1,5 +1,6 @@
-//  STM32F103-CMSIS-PAUSE.c
-
+//  STM32F103-Pause-lib.c
+//    Version 1.0   07/17/2023    Updated Comments
+//
 //  Target Microcontroller: STM32F103 (Blue Pill) operating at a clock speed of 8 MHz
 //  Mike Shegedin, 05/2023
 //
