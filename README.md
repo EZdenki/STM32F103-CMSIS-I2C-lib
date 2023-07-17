@@ -6,7 +6,7 @@ Basic I2C routines for STM32F103 (Blue Pill) using only CMSIS. Simple projects u
 
 Requires the following files in the working directory:
 + stm32f103x8.h
-+ STM32F103-pause-lib.c
++ STM32F103-Pause-lib.c
 
 Another header file may be used instead of stm32f103x8.h if it offers similar functionality. In such cases, the name of the header file should be updated in STM32F103-I2C-lib.c<br>
 <br>
