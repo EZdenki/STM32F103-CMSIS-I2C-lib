@@ -1,4 +1,4 @@
-# STM32F103-CMSIS-I2C
+# STM32F103-CMSIS-I2C-lib
 Basic I2C routines for STM32F103 (Blue Pill) using only CMSIS. Simple projects using this library are:
 + https://github.com/sandynomike/STM32F103-CMSIS-I2C-LED-Scanner
 + https://github.com/sandynomike/STM32F103-CMSIS-I2C-LCD-AHT10
