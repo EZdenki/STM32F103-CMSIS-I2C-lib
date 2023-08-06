@@ -1,22 +1,24 @@
 # STM32F103-CMSIS-I2C-lib
 Basic I2C routines for STM32F103 (Blue Pill) using only CMSIS. Simple projects using this library are:
 + https://github.com/sandynomike/STM32F103-CMSIS-I2C-LED-Scanner
++ https://github.com/sandynomike/STM32F103-CMSIS-I2C-LCD-lib
 + https://github.com/sandynomike/STM32F103-CMSIS-I2C-LCD-AHT10
++ https://github.com/sandynomike/STM32F103-CMSIS-I2C-EEPROM-lib
 
 
 Requires the following files in the working directory:
 + stm32f103x8.h
-+ STM32F103-Pause-lib.c
++ STM32F103-Delay-lib.c
 
 Another header file may be used instead of stm32f103x8.h if it offers similar functionality. In such cases, the name of the header file should be updated in STM32F103-I2C-lib.c<br>
 <br>
 Note that the desired target I2C interface, I2C1 or I2C2, will be passed to *thisI2C. The interface name is passed as-is, like<br> `I2C_init( I2C1 );`<br>
 ## The following routines are implemented:<br>
 
-### Initialize the specified I2C interface:
+### Initialize the specified I2C interface at specified speed:
 ```
 void
-I2C_init( I2C_TypeDef *thisI2C )
+I2C_init( I2C_TypeDef *thisI2C, uint32_t i2cSpeed )
 ```
 ### Set the start bit and wait for acknowledge that it was set:
 ```
