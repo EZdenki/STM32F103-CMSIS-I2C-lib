@@ -1,5 +1,6 @@
 // STM32F103-CMSIS-I2C-lib.c
-//   Version 1.0	7/16/2023	Updated Comments
+//   Version 1.1  6 Aug 2023    Added speed parameter to I2C_init() procedure
+//   Version 1.0  16 Jul 2023   Updated Comments
 //
 // Target Microcontroller: STM32F103 (Blue Pill)
 // Mike Shegedin, 05/2023   Started
